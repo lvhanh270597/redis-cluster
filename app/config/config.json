@@ -1,0 +1,50 @@
+{
+    "cluster-auth" : {
+        "password" : "password"
+    },
+    "conf-name": "redis.conf",
+    "hosts" : {
+        "172.16.176.130": {
+            "auth": {
+                "username" : "root",
+                "password" : "password"
+            },
+            "working-dir" : "/tmp/redis",
+            "master" : {
+                "port": "7000"
+            },
+            "slave" : {
+                "host" : "172.16.176.132",
+                "port" : "7001"
+            }
+        },
+        "172.16.176.131": {
+            "auth": {
+                "username" : "root",
+                "password" : "password"
+            },
+            "working-dir" : "/tmp/redis",
+            "master" : {
+                "port": "7000"
+            },
+            "slave" : {
+                "host" : "172.16.176.130",
+                "port" : "7001"
+            }
+        },
+        "172.16.176.132": {
+            "auth": {
+                "username" : "root",
+                "password" : "password"
+            },
+            "working-dir" : "/tmp/redis",
+            "master" : {
+                "port": "7000"
+            },
+            "slave" : {
+                "host" : "172.16.176.131",
+                "port" : "7001"
+            }
+        }
+    }
+}
